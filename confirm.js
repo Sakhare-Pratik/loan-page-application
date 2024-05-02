@@ -36,6 +36,7 @@ function validateOTP() {
     attempts++;
     if (attempts >= 3) {
       document.getElementById('otpForm').innerHTML = '<p>Validation Failed! Too many attempts. Please try again later.</p>';
+      alert('Validation Failed! Too many attempts. Please try again later.')
       // Redirect the user to the 404 page or perform any other action
       window.location.href = '404.html';
     } else {
