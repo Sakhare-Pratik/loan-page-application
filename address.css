@@ -72,6 +72,7 @@ header .container {
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(103, 11, 11, 0.3);
   width: 450px;
+  margin: 0 auto;
   max-width: 100%;
   position: absolute;
   backdrop-filter: blur(10px);
