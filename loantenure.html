@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Tenure Page</title>
+  <link rel="stylesheet" href="loantenure.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      Welcome, <span id="username"></span>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </header>
+
+  <div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+
+  <div class="containerPage4">
+    <h1>Loan Tenure Selection</h1>
+    <form id="loanTenureForm">
+      <div class='form-control'>
+        <label for="tenure">Loan Tenure :</label>
+        <select id="tenure" name="tenure">
+          <option value="6">6 months</option>
+          <option value="12">12 months</option>
+          <option value="24">24 months</option>
+          <option value="36">36 months</option>
+          <option value="48">48 months</option>
+          <option value="60">60 months</option>
+          <option value="72">72 months</option>
+          <option value="84">84 months</option>
+          <option value="96">96 months</option>
+          <option value="108">108 months</option>
+          <option value="120">120 months</option>
+        </select>
+      </div>
+      <div class="interest-rate" id="interestRate"></div>
+      <div class="emi-calculator" id="emiCalculator">
+        <!-- EMI calculator content will be dynamically populated here -->
+      </div>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+
+  <script src="loantenure.js"></script>
+</body>
+
+</html>
