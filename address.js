@@ -12,11 +12,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const zip = document.getElementById('zip').value.trim();
     const country = document.getElementById('country').value.trim();
 
-    // // Validate form fields
-    // if (fullName === '' || addressLine1 === '' || city === '' || state === '' || zip === '' || country === '') {
-    //   alert('Please fill in all fields.');
-    //   return;
-    // }
+     // Validate form fields
+     if (fullName === '' || addressLine1 === '' || city === '' || state === '' || zip === '' || country === '') {
+      alert('Please fill in all fields.');
+      return;
+    }
 
     // Validate ZIP/Postal Code format (optional)
     const zipRegex = /^\d{6}$/;
@@ -28,9 +28,8 @@ document.addEventListener('DOMContentLoaded', function () {
     sessionStorage.setItem('username', fullName);
 
     // If all validations pass, submit the form (or perform further processing)
-    alert('Address details submitted successfully!');
-    addressForm.reset();
-    // Reset form after submission
+    alert('Address Details Submitted Successfully!');
+    
     // Redirect the user to loan tenure page
     window.location.href = 'loantenure.html';
   });
