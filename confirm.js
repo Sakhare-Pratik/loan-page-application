@@ -29,15 +29,15 @@ function validateOTP() {
 
   if (enteredOTP === generatedOTP) {
     document.getElementById('otpForm').innerHTML = '<p>Validation Successful!</p>';
-    alert('Application Submitted')
-    // Redirect the user to the home page or perform any other action
-    window.location.href = 'index.html';
+    alert('OTP Verified')
+    // Redirect the user to the address page
+    window.location.href = 'address.html';
   } else {
     attempts++;
     if (attempts >= 3) {
       document.getElementById('otpForm').innerHTML = '<p>Validation Failed! Too many attempts. Please try again later.</p>';
       alert('Validation Failed! Too many attempts. Please try again later.')
-      // Redirect the user to the 404 page or perform any other action
+      // Redirect the user to the 404 page
       window.location.href = '404.html';
     } else {
       document.getElementById('otp').value = '';
