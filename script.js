@@ -97,6 +97,9 @@ document.getElementById('loanForm').addEventListener('submit',
       alert('Please enter a valid loan amount (maximum of 9 digits)');
       return;
     }
+    // Store Full Name in session storage
+    sessionStorage.setItem('username', fullName);
+
     // Store Loan Amount in session storage
     sessionStorage.setItem('loan', loanAmount);
 
