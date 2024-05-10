@@ -1,5 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
   const addressForm = document.getElementById('addressForm');
+  const usernameDisplay = document.getElementById('username');
+  const logoutBtn = document.getElementById('logoutBtn');
+  
+  // Retrieve username from session storage
+  const username = sessionStorage.getItem('username');
+
+  if (username) {
+    usernameDisplay.textContent = username;
+  }
+  logoutBtn.addEventListener('click', function () {
+    // Clear session storage and redirect to home page
+    sessionStorage.removeItem('username');
+    window.location.href = 'index.html';
+  });
 
   addressForm.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -24,10 +38,8 @@ document.addEventListener('DOMContentLoaded', function () {
       alert('Please enter a valid ZIP/Postal Code.');
       return;
     }
-    // Store Full Name in session storage
-    sessionStorage.setItem('username', fullName);
-
-    // If all validations pass, submit the form (or perform further processing)
+    
+    // If all validations pass, submit the form 
     alert('Address Details Submitted Successfully!');
     
     // Redirect the user to loan tenure page
