@@ -53,26 +53,13 @@ function numberToWords(number) {
   return words + ' Rupees Only';
 }
 
-// // Function to calculate estimated EMI
-// function calculateEMI(amount) {
-//   const principal = parseFloat(amount);
-
-//   const interestRate = 8.5 / 100; // 8.5%
-//   const tenureInYears = 15;
-//   const numberOfPayments = tenureInYears * 12;
-//   const monthlyInterestRate = interestRate / 12;
-
-//   const emi = (principal * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments));
-
-//   return emi.toFixed(2);
-
-// };
 // Update loan amount in words when the loan amount input changes
 document.getElementById('loanAmount').addEventListener('input', function () {
   var loanAmount = this.value;
   var loanAmountWords = numberToWords(loanAmount);
   document.getElementById('loanAmountInWords').textContent = loanAmountWords || '';
 });
+
 //  Function to handle form submission
 document.getElementById('loanForm').addEventListener('submit',
   function (event) {
@@ -110,6 +97,8 @@ document.getElementById('loanForm').addEventListener('submit',
       alert('Please enter a valid loan amount (maximum of 9 digits)');
       return;
     }
+    // Store Loan Amount in session storage
+    sessionStorage.setItem('loan', loanAmount);
 
     // Display loan amount in words or calculate estimated EMI
     var loanAmountDisplay = numberToWords(loanAmount)
