@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Address Page</title>
+  <link rel="stylesheet" href="address.css">
+</head>
+
+<body>
+  <div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+
+  <div class="containerPage3">
+    <h1>Address Details</h1>
+    <form class="addressForm" id="addressForm">
+      <div class='form-control'>
+        <label for="fullName">Full Name :</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Enter your FullName" autocomplete="off" required>
+      </div>
+
+      <div class='form-control'>
+        <label for="addressLine1">Address Line 1 :</label>
+        <input type="text" id="addressLine1" name="addressLine1" placeholder="Enter Address Line 1" autocomplete="off"
+          required>
+      </div>
+
+      <div class='form-control'>
+        <label for="addressLine2">Address Line 2 :</label>
+        <input type="text" id="addressLine2" name="addressLine2" placeholder="Enter Address Line 2 (Optional)"
+          autocomplete="off">
+      </div>
+
+      <div class='form-control'>
+        <label for="city">City :</label>
+        <input type="text" id="city" name="city" placeholder="Enter City" autocomplete="off" required>
+      </div>
+
+      <div class='form-control'>
+        <label for="state">State/Province :</label>
+        <input type="text" id="state" name="state" placeholder="Enter State/Province" autocomplete="off" required>
+      </div>
+
+      <div class='form-control'>
+        <label for="zip">Zip/Postal Code :</label>
+        <input type="text" id="zip" name="zip" placeholder="Enter Zip/Postal Code" autocomplete="off" required>
+      </div>
+
+      <div class='form-control'>
+        <label for="country">Country :</label>
+        <input type="text" id="country" name="country" placeholder="Enter Country" autocomplete="off" required>
+      </div>
+
+      <button type="submit">Continue</button>
+    </form>
+  </div>
+
+  <script src="address.js"></script>
+</body>
+
+</html>
